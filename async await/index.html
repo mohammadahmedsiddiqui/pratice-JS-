@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      <!-- <div>hey... this is ahmed</div>
+
+      <button id="stopper">stop</button> -->
+      <button id="start">start changing color</button>
+      <button id="stop">stop changing color</button>
+    </h1>
+  </body>
+</html>
+
+<script>
+  // settimeout cleartimeout setinterval clearinterval
+
+  // const changeme = function () {
+  //   document.querySelector("h1").innerHTML = "best course by apna college";
+  // };
+
+  // const chhanges = setTimeout(changeme, 6000);
+
+  // document.getElementById("stopper").addEventListener(" ", function () {
+  //   clearTimeout(chhanges);
+  //   console.log("stopper is working");
+  // });
+
+  //   start should change background color at every second
+
+  // generate a random color
+  const colorchange = function () {
+    const hex = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += hex[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+  let end;
+  const startchangingcolor = function () {
+    const bgcolor = () => (document.body.style.backgroundColor = colorchange());
+    if (!end) {
+      end = setInterval(bgcolor, 1000);
+    }
+  };
+
+  const stopchangingcolor = function () {
+    clearInterval(end);
+    end = null;
+  };
+
+  document
+    .getElementById("start")
+    .addEventListener("click", startchangingcolor);
+
+  document.getElementById("stop").addEventListener("click", stopchangingcolor);
+
+  console.log(color);
+</script>
+

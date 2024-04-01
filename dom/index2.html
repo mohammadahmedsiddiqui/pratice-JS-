@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+    <!-- <h1 id="dm">DOCUMENT OBJECT</h1>
+    <h1 id="rc">react component</h1> -->
+    <button id="btn">
+        click me
+    </button>
+ <input type="text" placeholder="anme" id="btn1">
+</div>
+</body>
+</html>
+<script>
+//    <------------------------------- chapter 3 content changing--------------------------->
+    // let d = document.getElementById("dm");
+    // d.textContent = "dom";
+    // d.classList.remove("highlighted");
+
+    // let r = document.getElementById("rc");
+    // r.innerHTML = "reactjs";
+    // r.classList.add("highlighted");
+
+//    <------------------------------- chapter 4 create a new element and add into a div--------------------------->
+// let para = document.createElement("p")
+// para.innerHTML = "react js based on components ";
+// let container = document.getElementById("content");
+// container.appendC  hild(para);
+
+//    <------------------------------- chapter 5 eventlistner onclick and maNY MORE     --------------------------->
+// click
+const b = document.getElementById("btn");
+b.addEventListener("click",function(){
+    alert("the button is clicked");
+}) 
+// keydown
+const b2 = document.getElementById("btn1");
+b2.addEventListener("keydown",function(event){
+    if(event.key==="Enter"){
+        alert("the enter button is clicked");
+    }else{
+        alert("the other button is clicked");
+    }
+    })
+    
+  
+</script>
